@@ -1,13 +1,14 @@
 
 import javax.swing.JFrame;
 
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.videoio.VideoCapture;
 
 public class MainWindow {
     public static void main(String arg[]){
         // Load the native library.  
-        System.loadLibrary("opencv_java249");
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         String window_name = "Capture - Face detection";
         JFrame frame = new JFrame(window_name);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

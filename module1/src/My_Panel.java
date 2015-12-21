@@ -53,7 +53,7 @@ class processor {
     private CascadeClassifier face_cascade;
     // Create a constructor method  
     public processor(){
-        face_cascade=new CascadeClassifier("lbpcascade_frontalface.xml");
+        face_cascade=new CascadeClassifier("D:/prj/opencv3/module1/resources/lbpcascade_frontalface.xml");
         if(face_cascade.empty())
         {
             System.out.println("--(!)Error loading A\n");
