@@ -3,10 +3,7 @@ package com.emekhanikov.video;/*
  * Search for the faces  
  * Display a circle around the faces using Java
  */
-import org.opencv.core.*;
-import org.opencv.core.Point;
-import org.opencv.imgproc.Imgproc;
-import org.opencv.objdetect.CascadeClassifier;
+import org.opencv.core.Mat;
 
 import javax.swing.*;
 import java.awt.*;
