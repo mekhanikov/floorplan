@@ -1,3 +1,4 @@
+package com.emekhanikov.video;
 
 import javax.swing.JFrame;
 

@@ -1,3 +1,5 @@
+package com.emekhanikov.image;
+
 import org.opencv.core.Core;
 
 public class HelloOpenCV {

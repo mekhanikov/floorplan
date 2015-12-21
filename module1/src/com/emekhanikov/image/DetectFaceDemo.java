@@ -1,3 +1,5 @@
+package com.emekhanikov.image;
+
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
@@ -14,7 +16,7 @@ import org.opencv.objdetect.CascadeClassifier;
 //
 class DetectFaceDemo {
     public void run() {
-        System.out.println("\nRunning DetectFaceDemo");
+        System.out.println("\nRunning com.emekhanikov.image.DetectFaceDemo");
 
         // Create a face detector from the cascade file in the resources
         // directory.
