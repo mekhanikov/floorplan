@@ -1,12 +1,13 @@
 package com.emekhanikov.image;
 
-import org.opencv.core.Core;
-import org.opencv.core.Mat;
+import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainFloorWindow {
     public static void main(String arg[]){
@@ -23,7 +24,21 @@ public class MainFloorWindow {
 
         Mat image = Imgcodecs.imread("D:/prj/opencv3/module1/resources/floor.jpg");
         Mat res = new Mat();
+        Mat canny_output = new Mat();
+        Mat hierarchy = new Mat();
+        Point offset = new Point(0, 0);
         Imgproc.threshold(image, res, 127, 255, Imgproc.THRESH_BINARY);
+
+        /// Detect edges using canny
+        double thresh = 127;
+        Imgproc.Canny(res, canny_output, thresh, thresh * 2, 3, true);
+        /// Find contours
+        List<MatOfPoint> contours = new ArrayList<MatOfPoint>();
+        //Imgproc.findContours(canny_output, contours, hierarchy, Imgproc.CV_RETR_TREE, Imgproc.CV_CHAIN_APPROX_SIMPLE, offset);
+        Imgproc.findContours(canny_output, contours, hierarchy, 3, 2, offset);
+
+        Imgproc.polylines(res, contours, true, new Scalar(0, 0, 255));
+
         frame.setSize(image.width(), image.height());
 
         my_panel.MatToBufferedImage(res);
