@@ -14,8 +14,8 @@ public class MainWindow {
         JFrame frame = new JFrame(window_name);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,400);
-        processor my_processor=new processor();
-        My_Panel my_panel = new My_Panel();
+        Processor my_processor=new Processor();
+        MyPanel my_panel = new MyPanel();
         frame.setContentPane(my_panel);
         frame.setVisible(true);
         //-- 2. Read the video stream  
