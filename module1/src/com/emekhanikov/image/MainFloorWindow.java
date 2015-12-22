@@ -22,7 +22,7 @@ public class MainFloorWindow {
         frame.setContentPane(my_panel);
         frame.setVisible(true);
 
-        Mat image = Imgcodecs.imread("D:/prj/opencv3/module1/resources/floor.jpg");
+        Mat image = Imgcodecs.imread("D:/prj/floorplan/module1/resources/floor.jpg");
         Mat res = new Mat();
         Mat canny_output = new Mat();
         Mat hierarchy = new Mat();
@@ -37,8 +37,8 @@ public class MainFloorWindow {
         //Imgproc.findContours(canny_output, contours, hierarchy, Imgproc.CV_RETR_TREE, Imgproc.CV_CHAIN_APPROX_SIMPLE, offset);
         Imgproc.findContours(canny_output, contours, hierarchy, 3, 2, offset);
 
-        Imgproc.polylines(res, contours, true, new Scalar(0, 0, 255));
-
+        Imgproc.polylines(res, contours, true, new Scalar(0, 255, 0));
+        Imgproc.drawContours(res, contours, -1, new Scalar(0, 0, 255), 1, 8, hierarchy, 1, offset);
         frame.setSize(image.width(), image.height());
 
         my_panel.MatToBufferedImage(res);
