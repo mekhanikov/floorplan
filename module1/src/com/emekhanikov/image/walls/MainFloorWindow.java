@@ -1,9 +1,8 @@
-package com.emekhanikov.image;
+package com.emekhanikov.image.walls;
 
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
-import org.opencv.videoio.VideoCapture;
 
 import javax.swing.*;
 import java.util.ArrayList;

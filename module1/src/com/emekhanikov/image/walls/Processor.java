@@ -1,4 +1,4 @@
-package com.emekhanikov.image;
+package com.emekhanikov.image.walls;
 
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;

@@ -1,4 +1,4 @@
-package com.emekhanikov.image;/*
+package com.emekhanikov.image.walls;/*
  * Captures the camera stream with OpenCV  
  * Search for the faces  
  * Display a circle around the faces using Java
